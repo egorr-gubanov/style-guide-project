@@ -1,31 +1,35 @@
-site_name: Стайлгайд ЕГЭРывка
-site_description: Правила разработки и оформления документации проекта ЕГЭРывок
+site_name: Стайлгайд «Сосны»
+site_description: Правила написания и оформления документации сервиса бронирования загородных домиков «Сосны»
 site_url: https://egorr-gubanov.github.io/style-guide-project/
 repo_url: https://github.com/egorr-gubanov/style-guide-project
 repo_name: egorr-gubanov/style-guide-project
 docs_dir: docs
 site_dir: site
 strict: true
+exclude_docs: |
+  !/templates/
 theme:
   name: mkdocs
   locale: ru
 nav:
   - О руководстве: index.md
-  - Выбор проекта: project-analysis.md
   - Правила:
       - Стиль изложения: rules/voice.md
-      - Термины: rules/terminology.md
-      - Орфография и числа: rules/typography.md
-      - Структура: rules/structure.md
-      - Markdown и ссылки: rules/markdown.md
-      - Код и изображения: rules/assets.md
-      - ИИ и достоверность: rules/ai.md
-  - Шаблоны: templates.md
+      - Терминология и интерфейс: rules/terminology.md
+      - Орфография и значения: rules/notation.md
+      - Структура документов: rules/structure.md
+      - Оформление Markdown: rules/markdown.md
+      - Изображения и примеры: rules/examples.md
+      - Достоверность сведений: rules/accuracy.md
+      - Проверка и изменения: rules/review.md
+  - Глоссарий: glossary.md
+  - Шаблоны:
+      - Пользовательская инструкция: templates/user-guide.md
+      - Требования: templates/requirements.md
   - Примеры:
-      - Локальный запуск: examples/local-setup.md
-      - Экран диагностики: examples/diagnostic.md
-  - Проверка стайлгайда: validation.md
-  - Источники: sources.md
+      - Заполнение формы: examples/booking.md
+      - Проверка формы: examples/form-validation.md
+  - Источники: references.md
 plugins:
   - search:
       lang: ru

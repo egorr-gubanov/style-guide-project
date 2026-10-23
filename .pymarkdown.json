@@ -1,0 +1,8 @@
+{
+  "plugins": {
+    "md013": {"line_length": 120, "code_blocks": false},
+    "md024": {"siblings_only": true},
+    "md046": {"style": "fenced"}
+  },
+  "extensions": {"markdown-tables": {"enabled": true}}
+}

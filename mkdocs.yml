@@ -1,0 +1,36 @@
+site_name: Стайлгайд ЕГЭРывка
+site_description: Правила разработки и оформления документации проекта ЕГЭРывок
+site_url: https://egorr-gubanov.github.io/style-guide-project/
+repo_url: https://github.com/egorr-gubanov/style-guide-project
+repo_name: egorr-gubanov/style-guide-project
+docs_dir: docs
+site_dir: site
+strict: true
+theme:
+  name: mkdocs
+  locale: ru
+nav:
+  - О руководстве: index.md
+  - Выбор проекта: project-analysis.md
+  - Правила:
+      - Стиль изложения: rules/voice.md
+      - Термины: rules/terminology.md
+      - Орфография и числа: rules/typography.md
+      - Структура: rules/structure.md
+      - Markdown и ссылки: rules/markdown.md
+      - Код и изображения: rules/assets.md
+      - ИИ и достоверность: rules/ai.md
+  - Шаблоны: templates.md
+  - Примеры:
+      - Локальный запуск: examples/local-setup.md
+      - Экран диагностики: examples/diagnostic.md
+  - Проверка стайлгайда: validation.md
+  - Источники: sources.md
+plugins:
+  - search:
+      lang: ru
+markdown_extensions:
+  - tables
+  - pymdownx.superfences
+  - toc:
+      permalink: true

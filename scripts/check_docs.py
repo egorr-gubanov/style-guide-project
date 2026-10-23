@@ -15,17 +15,20 @@ class Rules(HTMLParser):
         self.errors = []
         self.anchor = None
         self.label = []
+        self.h1_count = 0
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
+        if tag == "h1":
+            self.h1_count += 1
         if tag == "a":
             href = attributes.get("href", "")
             if LOCAL_PATH.search(href):
-                self.errors.append(f"M03 nonportable link: {href}")
+                self.errors.append(f"M02 nonportable link: {href}")
             self.anchor = href
             self.label = []
         if tag == "img" and not attributes.get("alt", "").strip():
-            self.errors.append("C03 image requires meaningful alt text")
+            self.errors.append("C01 image requires nonempty alt text")
 
     def handle_data(self, data):
         if self.anchor is not None:
@@ -34,13 +37,15 @@ class Rules(HTMLParser):
     def handle_endtag(self, tag):
         if tag == "a" and self.anchor is not None:
             if " ".join("".join(self.label).casefold().split()) in GENERIC:
-                self.errors.append("M04 generic link text")
+                self.errors.append("M02 generic link text")
             self.anchor = None
 
 
 def inspect_text(text):
     parser = Rules()
     parser.feed(markdown.markdown(text, extensions=["tables", "pymdownx.superfences"]))
+    if parser.h1_count != 1:
+        parser.errors.append(f"M01 expected one H1, found {parser.h1_count}")
     return parser.errors
 
 

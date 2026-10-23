@@ -21,6 +21,7 @@ nav:
       - Структура документов: rules/structure.md
       - Оформление Markdown: rules/markdown.md
       - Изображения и примеры: rules/examples.md
+      - Доступность текста: rules/accessibility.md
       - Достоверность сведений: rules/accuracy.md
       - Проверка и изменения: rules/review.md
   - Глоссарий: glossary.md

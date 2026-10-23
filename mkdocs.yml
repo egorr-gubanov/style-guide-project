@@ -3,6 +3,7 @@ site_description: Правила написания и оформления до
 site_url: https://egorr-gubanov.github.io/style-guide-project/
 repo_url: https://github.com/egorr-gubanov/style-guide-project
 repo_name: egorr-gubanov/style-guide-project
+edit_uri: edit/main/docs/
 docs_dir: docs
 site_dir: site
 strict: true

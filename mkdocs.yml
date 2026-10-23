@@ -20,6 +20,7 @@ nav:
       - Markdown и ссылки: rules/markdown.md
       - Код и изображения: rules/assets.md
       - ИИ и достоверность: rules/ai.md
+      - Доступность текста: rules/accessibility.md
   - Шаблоны: templates.md
   - Примеры:
       - Локальный запуск: examples/local-setup.md
